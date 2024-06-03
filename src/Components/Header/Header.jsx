@@ -52,13 +52,13 @@ const Header = () => {
                 {links}
               </ul>
             </div>
-            <NavLink className="btn btn-ghost text-xl">daisyUI</NavLink>
+            <NavLink className="btn btn-ghost text-xl">Career Hub</NavLink>
           </div>
           <div className="navbar-center hidden lg:flex">
             <ul className="menu menu-horizontal px-1">{links}</ul>
           </div>
           <div className="navbar-end">
-            <NavLink className="btn">Button</NavLink>
+            <NavLink className="btn btn-primary">Start Applying </NavLink>
           </div>
         </div>
       </div>
