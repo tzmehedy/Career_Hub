@@ -3,7 +3,7 @@ import Catogories from "../Catogories/Catogories";
 import Features from "../Features/Features";
 
 const Home = () => (
-    <div className="my-10 max-w-[900px] mx-auto">
+    <div className="my-10 container mx-auto">
         <Banner></Banner>
         <Catogories></Catogories>
         <Features></Features>

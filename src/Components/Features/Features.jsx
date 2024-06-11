@@ -12,8 +12,8 @@ const Features = () => {
           .then((data) => setFeatures(data));
     },[])
     return (
-      <div className="">
-        <div className="text-center">
+      <div className="flex flex-col justify-center items-center mt-10 space-y-10">
+        <div className="text-center space-y-5">
           <h1 className="font-bold text-4xl">Featured Jobs</h1>
           <p>
             Explore thousands of job opportunities with all the information you

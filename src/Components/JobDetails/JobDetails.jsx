@@ -1,13 +1,21 @@
 import { useLoaderData, useParams } from "react-router-dom";
 import { AiTwotoneDollar } from "react-icons/ai";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { saveStoredJobs } from "../../Utilities/localStorage";
+
 const JobDetails = () => {
     const jobs = useLoaderData()
-
     const {id} = useParams()
 
-    const job = jobs.find(job => job.id === parseInt(id));
+    const idInt = parseInt(id)
+    const job = jobs.find((job) => job.id === idInt);
 
-    console.log(job);
+    const handleAppliedJobs =()=>{
+      saveStoredJobs(id);
+      toast("Successfully Added")
+    }
+  
 
     return (
       <div className="container mx-auto ">
@@ -74,7 +82,10 @@ const JobDetails = () => {
             </pre>
             <br />
             <div className="text-center">
-              <button className="btn btn-primary">Apply Now</button>
+              <button onClick={handleAppliedJobs} className="btn btn-primary">
+                Apply Now
+              </button>
+              <ToastContainer />
             </div>
           </div>
         </div>
